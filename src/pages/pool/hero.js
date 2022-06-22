@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react';
+import { useState } from 'react';
 import CompletedPool from './completedPool';
 import UpcomingPool from './upcomingPool';
 
