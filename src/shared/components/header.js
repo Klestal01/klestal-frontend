@@ -4,9 +4,13 @@ import { Router, NavLink } from 'react-router-dom';
 const Header = () => {
   const [select, setSelect] = useState('home');
   return (
-    <nav className="flex flex-row bg-bgColor h-[10vh] w-full fixed ">
+    <nav className="flex flex-row bg-bgColor h-[10vh] w-full fixed z-10">
       <div className=" text-white px-6 py-3 flex justify-around w-full items-center">
-        <div>logo</div>
+        <div className="">
+          <NavLink to={'/'}>
+            <img src="./logo.png" className="h-10 cursor-pointer" />
+          </NavLink>
+        </div>
         <div className="md:flex md:items-center md:justify-left gap-10   ">
           <NavLink to={'/'}>
             <div
