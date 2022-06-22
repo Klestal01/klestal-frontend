@@ -1,51 +1,52 @@
 import Card from '../../shared/components/card';
 import { v4 } from 'uuid';
 
-const UpcomingPool = () => {
+const UpcommingPool = () => {
   const cardData = [
     {
       headerImage: './card1Head.png',
       logo: './fara.png',
       ProjectName: 'Project Name',
       PlaceHolder: 'Place Holder',
-      description: 'lorem ispum',
+      description:
+        'Lorem ipsum dolor sit amet, consectetur adipiscing elit egestas blandit libero.',
       totalRaise: '100',
-      start: '100',
-      prize: '100',
+      start: 'April 7, 11:00 UTC',
+      prize: '1 $PLACEHOLDER = 0.01 BUSD',
       percentage: '80',
     },
     {
-      headerImage: './card1Head.png',
-      logo: './fara.png',
+      headerImage: './header2.png',
+      logo: './images.png',
       ProjectName: 'Project Name',
       PlaceHolder: 'Place Holder',
       description: 'lorem ispum',
       totalRaise: '100',
       start: '100',
       prize: '100',
-      percentage: '80',
+      percentage: '90',
     },
     {
-      headerImage: './card1Head.png',
-      logo: './fara.png',
+      headerImage: './header3.png',
+      logo: './logo1.png',
       ProjectName: 'Project Name',
       PlaceHolder: 'Place Holder',
       description: 'lorem ispum',
       totalRaise: '100',
       start: '100',
       prize: '100',
-      percentage: '80',
+      percentage: '70',
     },
     {
-      headerImage: './card1Head.png',
-      logo: './fara.png',
+      headerImage: './header2.png',
+      logo: './images.png',
       ProjectName: 'Project Name',
       PlaceHolder: 'Place Holder',
       description: 'lorem ispum',
       totalRaise: '100',
       start: '100',
       prize: '100',
-      percentage: '80',
+      percentage: '90',
     },
     {
       headerImage: './card1Head.png',
@@ -60,15 +61,19 @@ const UpcomingPool = () => {
     },
   ];
   return (
-    <div className="z-1 relative text-white">
+    <div className="z-1 relative scrollbar-hide text-white">
       <div className="flex flex-row justify-around">
-        <p className="text-xl font-bold">Upcoming Pool</p>
-        <div className="flex flex-row gap-2">
-          <button className="bg-red h-[40px] w-[40px] rounded-lg"></button>
-          <button className="bg-red h-[40px] w-[40px] rounded-lg"> </button>
+        <p className="text-2xl  font-bold">Upcoming Pool</p>
+        <div className="flex flex-row gap-4">
+          <button className="bg-red h-[50px] w-[50px] rounded-lg">
+            <img src="./arrowRight.svg" className="w-[50px]" />
+          </button>
+          <button className="bg-red h-[50px] w-[50px] rounded-lg">
+            <img src="./arrowLeft.svg" className="w-[50px]" />
+          </button>
         </div>
       </div>
-      <div className="py-10 px-10 grid grid-flow-col auto-cols-max overflow-auto gap-6">
+      <div className="py-10 px-10 grid grid-flow-col auto-cols-max overflow-auto scrollbar-hide gap-6">
         {cardData.map((i) => (
           <Card
             key={v4()}
@@ -83,19 +88,14 @@ const UpcomingPool = () => {
             percentage={i.percentage}
           />
         ))}
-        {/* <Card
-          headerImage={cardData.headerImage}
-          logo={cardData.logo}
-          ProjectName={cardData.ProjectName}
-          PlaceHolder={cardData.PlaceHolder}
-          description={cardData.description}
-          totalRaise={cardData.totalRaise}
-          start={cardData.start}
-          prize={cardData.prize}
-          percentage={cardData.percentage}
-        /> */}
+      </div>
+      <div className="flex w-full justify-center">
+        <button className="border border-[#42445F] rounded-full w-[186px] h-[50px] ">
+          View More
+        </button>
       </div>
     </div>
   );
 };
-export default UpcomingPool;
+
+export default UpcommingPool;

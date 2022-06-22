@@ -1,10 +1,16 @@
+import BrandAndPartner from './brandPartner';
+import CompletedPool from './completedPool';
 import Hero from './hero';
-import UpcommingPool from './upcoming-pool';
+import TierSystem from './tierSystem';
+import UpcomingPool from './upcomingPool';
 const Home = () => {
   return (
     <div className="w-full ">
       <Hero />
-      <UpcommingPool />
+      <UpcomingPool />
+      <CompletedPool />
+      <BrandAndPartner />
+      <TierSystem />
     </div>
   );
 };
