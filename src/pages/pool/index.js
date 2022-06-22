@@ -1,8 +1,10 @@
+import HeroPool from './hero';
+
 const Pool = () => {
   return (
-    <>
-      <h1 className="pt-20">pool</h1>
-    </>
+    <div className="w-full">
+      <HeroPool />
+    </div>
   );
 };
 
