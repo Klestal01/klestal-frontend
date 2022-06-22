@@ -39,7 +39,7 @@ const Card = (props) => {
         </div>
 
         <div className="w-full mt-[20px]  bg-[#22243E] rounded-full h-2.5 ">
-        <div
+          <div
             className={`bg-gradient-to-r from-orange to-red h-2.5 rounded-full ${percentage}`}
           />
         </div>
