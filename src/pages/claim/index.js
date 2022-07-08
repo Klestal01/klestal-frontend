@@ -1,5 +1,11 @@
+import ClaimHero from './hero';
+
 const Claim = () => {
-  return <></>;
+  return (
+    <>
+      <ClaimHero />
+    </>
+  );
 };
 
 export default Claim;
