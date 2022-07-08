@@ -8,6 +8,114 @@ const HeroStake = () => {
   const [connect, setConnect] = useState(true);
   return (
     <div className="mb-[9rem]">
+      {modal ? (
+        <Modal>
+          <>
+            <div className="bg-[#16182C] flex-col gap-4      w-[95vw] h-[77vh] sm:[150vh]   sm:w-[80vw]  md:h-[80%]  2xl:w-[50vw] 2xl:h-[50vh] text-white rounded-md flex p-[1rem] relative  justify-evenly sm:justify-around ">
+              <h1 className="font-bold text-md sm:text-xl text-center">
+                Stake
+              </h1>
+              <button
+                onClick={() => setModal(false)}
+                className="absolute -top-4 -right-3 bg-[#16182C] rounded-full border w-[34px] h-[34px] flex items-center justify-center border-slate-400"
+              >
+                &#128473;
+              </button>
+
+              <div className="h-[100px] sm:h-[10vh]  p-[10px] lg:p-[15px] w-full border-[#3F4269] border-[1px] bg-[#22243E] rounded-lg flex flex-row">
+                <div className="w-fit sm:w-full flex flex-col gap-4 relative">
+                  <p className="text-sm opacity-60 text-left">Amount</p>
+                  <p className="text-md lg:text-xl font-semibold absolute left-0 bottom-0 ">
+                    0
+                  </p>
+                </div>
+                <div className="w-full flex flex-col gap-4 relative ">
+                  <p className="text-sm opacity-60 text-right">
+                    Available : 1,000 $KLS
+                  </p>
+                  <span className="bg-[#6B6D84] absolute right-0 bottom-0 w-fit px-[10px] py-[2px] lg:px-[25px] lg:py-[5px]  rounded-[4px] ">
+                    Max
+                  </span>
+                </div>
+              </div>
+
+              <p className="font-sm opacity-60">Lock Duration</p>
+              <div className="grid grid-cols-3 gap-4 w-full">
+                <span
+                  onClick={() => {
+                    setDuration('7');
+                  }}
+                  className={`${
+                    duration === '7' ? `bg-[#B36EF9]` : `bg-[#22243E]`
+                  } text-center py-[3px] sm:py-[6px] cursor-pointer text-sm rounded-md`}
+                >
+                  7 Days
+                </span>
+                <span
+                  onClick={() => {
+                    setDuration('14');
+                  }}
+                  className={`${
+                    duration === '14' ? `bg-[#B36EF9]` : `bg-[#22243E]`
+                  } text-center py-[6px] cursor-pointer text-sm rounded-md`}
+                >
+                  14 Days
+                </span>
+                <span
+                  onClick={() => {
+                    setDuration('30');
+                  }}
+                  className={`${
+                    duration === '30' ? `bg-[#B36EF9]` : `bg-[#22243E]`
+                  } text-center py-[6px] cursor-pointer text-sm rounded-md`}
+                >
+                  30 Days
+                </span>
+                <span
+                  onClick={() => {
+                    setDuration('60');
+                  }}
+                  className={`${
+                    duration === '60' ? `bg-[#B36EF9]` : `bg-[#22243E]`
+                  } text-center py-[6px] cursor-pointer text-sm rounded-md`}
+                >
+                  60 Days
+                </span>
+                <span
+                  onClick={() => {
+                    setDuration('90');
+                  }}
+                  className={`${
+                    duration === '90' ? `bg-[#B36EF9]` : `bg-[#22243E]`
+                  } text-center py-[6px] cursor-pointer text-sm rounded-md`}
+                >
+                  90 Days
+                </span>
+                <span
+                  onClick={() => {
+                    setDuration('180');
+                  }}
+                  className={`${
+                    duration === '180' ? `bg-[#B36EF9]` : `bg-[#22243E]`
+                  } text-center py-[6px] cursor-pointer text-sm rounded-md`}
+                >
+                  180 Days
+                </span>
+              </div>
+              <span className="flex flex-row mt-[20px] justify-around">
+                <p className="font-semibold  w-full">APY Rate:</p>
+                <p className="font-semibold w-full text-right">90%</p>
+              </span>
+              <button
+                type="button"
+                className="bg-gradient-to-r from-purple to-pink rounded-3xl px-7 py-2"
+              >
+                Stake
+              </button>
+            </div>
+          </>
+        </Modal>
+      ) : null}
       <div className="w-full">
         <img
           className=" left-0 z-0 w-full h-[522px] object-cover  opacity-40"
@@ -85,108 +193,6 @@ const HeroStake = () => {
                 </button>
               )}
             </div>
-            {modal ? (
-              <Modal>
-                <>
-                  <div className="bg-[#16182C] flex-col gap-4 w-[50vw] h-[50vh] text-white rounded-md flex p-10 relative">
-                    <h1 className="font-bold text-xl text-center">Stake</h1>
-                    <button
-                      onClick={() => setModal(false)}
-                      className="absolute -top-4 -right-3 bg-[#16182C] rounded-full border w-[34px] h-[34px] flex items-center justify-center border-slate-400"
-                    >
-                      &#128473;
-                    </button>
-                    <div className="h-[10vh] p-[15px] w-full border-[#3F4269] border-[1px] bg-[#22243E] rounded-lg flex flex-row">
-                      <div className="w-full flex flex-col gap-4">
-                        <p className="text-sm opacity-60">Amount</p>
-                        <p className="text-xl font-semibold">0</p>
-                      </div>
-                      <div className="w-full flex flex-col gap-4 relative ">
-                        <p className="text-sm opacity-60 text-right">
-                          Available : 1,000 $KLS
-                        </p>
-                        <span className="bg-[#6B6D84] absolute right-0 bottom-0 px-[25px] py-[5px] w-fit rounded-[4px] ">
-                          Max
-                        </span>
-                      </div>
-                    </div>
-                    <p className="font-sm opacity-60">Lock Duration</p>
-                    <div className="grid grid-cols-3 gap-4 w-full">
-                      <span
-                        onClick={() => {
-                          setDuration('7');
-                        }}
-                        className={`${
-                          duration === '7' ? `bg-[#B36EF9]` : `bg-[#22243E]`
-                        } text-center py-[6px] cursor-pointer text-sm rounded-md`}
-                      >
-                        7 Days
-                      </span>
-                      <span
-                        onClick={() => {
-                          setDuration('14');
-                        }}
-                        className={`${
-                          duration === '14' ? `bg-[#B36EF9]` : `bg-[#22243E]`
-                        } text-center py-[6px] cursor-pointer text-sm rounded-md`}
-                      >
-                        14 Days
-                      </span>
-                      <span
-                        onClick={() => {
-                          setDuration('30');
-                        }}
-                        className={`${
-                          duration === '30' ? `bg-[#B36EF9]` : `bg-[#22243E]`
-                        } text-center py-[6px] cursor-pointer text-sm rounded-md`}
-                      >
-                        30 Days
-                      </span>
-                      <span
-                        onClick={() => {
-                          setDuration('60');
-                        }}
-                        className={`${
-                          duration === '60' ? `bg-[#B36EF9]` : `bg-[#22243E]`
-                        } text-center py-[6px] cursor-pointer text-sm rounded-md`}
-                      >
-                        60 Days
-                      </span>
-                      <span
-                        onClick={() => {
-                          setDuration('90');
-                        }}
-                        className={`${
-                          duration === '90' ? `bg-[#B36EF9]` : `bg-[#22243E]`
-                        } text-center py-[6px] cursor-pointer text-sm rounded-md`}
-                      >
-                        90 Days
-                      </span>
-                      <span
-                        onClick={() => {
-                          setDuration('180');
-                        }}
-                        className={`${
-                          duration === '180' ? `bg-[#B36EF9]` : `bg-[#22243E]`
-                        } text-center py-[6px] cursor-pointer text-sm rounded-md`}
-                      >
-                        180 Days
-                      </span>
-                    </div>
-                    <span className="flex flex-row mt-[20px] justify-around">
-                      <p className="font-semibold  w-full">APY Rate:</p>
-                      <p className="font-semibold w-full text-right">90%</p>
-                    </span>
-                    <button
-                      type="button"
-                      className="bg-gradient-to-r from-purple to-pink rounded-3xl px-7 py-2"
-                    >
-                      Stake
-                    </button>
-                  </div>
-                </>
-              </Modal>
-            ) : null}
 
             <div className="grid grid-cols-2 w-full gap-4">
               <div className="bg-[#16182D] p-[20px] flex flex-col justify-evenly">
