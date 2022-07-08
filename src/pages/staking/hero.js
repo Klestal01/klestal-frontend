@@ -1,11 +1,12 @@
-import { useState, useEffect } from 'react';
+import { useState } from 'react';
 import Modal from '../../shared/components/modal';
 
 const HeroStake = () => {
   const [modal, setModal] = useState(false);
   const [duration, setDuration] = useState('');
-
+  // eslint-disable-next-line
   const [connect, setConnect] = useState(true);
+
   return (
     <div className="mb-[9rem]">
       {modal ? (
