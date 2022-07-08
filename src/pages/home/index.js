@@ -9,8 +9,8 @@ const Home = () => {
       <Hero />
       <UpcomingPool />
       <CompletedPool />
-      <BrandAndPartner />
       <TierSystem />
+      <BrandAndPartner />
     </div>
   );
 };
