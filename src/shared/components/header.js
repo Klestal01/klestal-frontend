@@ -8,7 +8,13 @@ const Header = () => {
       <div className=" text-white px-6 py-3 flex justify-around w-full items-center">
         <div className="">
           <NavLink to={'/'}>
-            <img src="./logo.png" className="h-10 cursor-pointer" />
+            <img
+              onClick={() => {
+                setSelect('home');
+              }}
+              src="./logo.png"
+              className="h-10 cursor-pointer"
+            />
           </NavLink>
         </div>
         <div className="md:flex md:items-center md:justify-left gap-10   ">
