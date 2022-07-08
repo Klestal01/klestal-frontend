@@ -1,15 +1,17 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import Modal from '../../shared/components/modal';
 
 const HeroStake = () => {
-  const [isModalOpen, setIsModalOpen] = useState(false);
+  const [modal, setModal] = useState(false);
+  const [duration, setDuration] = useState('');
+
   const [connect, setConnect] = useState(true);
   return (
     <div className="mb-[9rem]">
       <div className="w-full">
         <img
           className=" left-0 z-0 w-full h-[522px] object-cover  opacity-40"
-          src="./stakingHeader.png"
+          src="./images/stakingHeader.png"
           alt="background"
           draggable={false}
         />
@@ -61,9 +63,7 @@ const HeroStake = () => {
               {connect ? (
                 <div className="flex gap-4">
                   <button
-                    onClick={() => {
-                      setIsModalOpen(!isModalOpen);
-                    }}
+                    onClick={() => setModal(!modal)}
                     type="button"
                     className="bg-gradient-to-r w-full from-purple to-pink rounded-3xl px-7 py-2"
                   >
@@ -85,20 +85,106 @@ const HeroStake = () => {
                 </button>
               )}
             </div>
-            {isModalOpen ? (
+            {modal ? (
               <Modal>
-                <div className="border boder-1 border-gray-400 bg-white rounded-md w-fit  p-3 px-4 flex flex-col items-center justify-around h-44">
-                  <h1 className="text-2xl text-gray-700">This is a Modal</h1>
-                  <p className="text-lg text-center text-slate-500">
-                    This is made with createPortal {'&'} useRef
-                  </p>
-                  <button
-                    onClick={setIsModalOpen(!isModalOpen)}
-                    className="px-4 py-1.5  border rounded  bg-slate-100 border-gray-400  hover:shadow duration-150"
-                  >
-                    Great
-                  </button>
-                </div>
+                <>
+                  <div className="bg-[#16182C] flex-col gap-4 w-[50vw] h-[50vh] text-white rounded-md flex p-10 relative">
+                    <h1 className="font-bold text-xl text-center">Stake</h1>
+                    <button
+                      onClick={() => setModal(false)}
+                      className="absolute -top-4 -right-3 bg-[#16182C] rounded-full border w-[34px] h-[34px] flex items-center justify-center border-slate-400"
+                    >
+                      &#128473;
+                    </button>
+                    <div className="h-[10vh] p-[15px] w-full border-[#3F4269] border-[1px] bg-[#22243E] rounded-lg flex flex-row">
+                      <div className="w-full flex flex-col gap-4">
+                        <p className="text-sm opacity-60">Amount</p>
+                        <p className="text-xl font-semibold">0</p>
+                      </div>
+                      <div className="w-full flex flex-col gap-4 relative ">
+                        <p className="text-sm opacity-60 text-right">
+                          Available : 1,000 $KLS
+                        </p>
+                        <span className="bg-[#6B6D84] absolute right-0 bottom-0 px-[25px] py-[5px] w-fit rounded-[4px] ">
+                          Max
+                        </span>
+                      </div>
+                    </div>
+                    <p className="font-sm opacity-60">Lock Duration</p>
+                    <div className="grid grid-cols-3 gap-4 w-full">
+                      <span
+                        onClick={() => {
+                          setDuration('7');
+                        }}
+                        className={`${
+                          duration === '7' ? `bg-[#B36EF9]` : `bg-[#22243E]`
+                        } text-center py-[6px] cursor-pointer text-sm rounded-md`}
+                      >
+                        7 Days
+                      </span>
+                      <span
+                        onClick={() => {
+                          setDuration('14');
+                        }}
+                        className={`${
+                          duration === '14' ? `bg-[#B36EF9]` : `bg-[#22243E]`
+                        } text-center py-[6px] cursor-pointer text-sm rounded-md`}
+                      >
+                        14 Days
+                      </span>
+                      <span
+                        onClick={() => {
+                          setDuration('30');
+                        }}
+                        className={`${
+                          duration === '30' ? `bg-[#B36EF9]` : `bg-[#22243E]`
+                        } text-center py-[6px] cursor-pointer text-sm rounded-md`}
+                      >
+                        30 Days
+                      </span>
+                      <span
+                        onClick={() => {
+                          setDuration('60');
+                        }}
+                        className={`${
+                          duration === '60' ? `bg-[#B36EF9]` : `bg-[#22243E]`
+                        } text-center py-[6px] cursor-pointer text-sm rounded-md`}
+                      >
+                        60 Days
+                      </span>
+                      <span
+                        onClick={() => {
+                          setDuration('90');
+                        }}
+                        className={`${
+                          duration === '90' ? `bg-[#B36EF9]` : `bg-[#22243E]`
+                        } text-center py-[6px] cursor-pointer text-sm rounded-md`}
+                      >
+                        90 Days
+                      </span>
+                      <span
+                        onClick={() => {
+                          setDuration('180');
+                        }}
+                        className={`${
+                          duration === '180' ? `bg-[#B36EF9]` : `bg-[#22243E]`
+                        } text-center py-[6px] cursor-pointer text-sm rounded-md`}
+                      >
+                        180 Days
+                      </span>
+                    </div>
+                    <span className="flex flex-row mt-[20px] justify-around">
+                      <p className="font-semibold  w-full">APY Rate:</p>
+                      <p className="font-semibold w-full text-right">90%</p>
+                    </span>
+                    <button
+                      type="button"
+                      className="bg-gradient-to-r from-purple to-pink rounded-3xl px-7 py-2"
+                    >
+                      Stake
+                    </button>
+                  </div>
+                </>
               </Modal>
             ) : null}
 
