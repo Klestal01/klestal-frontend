@@ -3,7 +3,7 @@ const Hero = () => {
     <div className="">
       <img
         className="h-[673px] left-0 z-0 w-full object-contain"
-        src="./hero-bg@2x.jpg"
+        src="./images/hero-bg,png"
         alt="background"
         draggable={false}
       />
