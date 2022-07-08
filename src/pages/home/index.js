@@ -2,6 +2,7 @@ import BrandAndPartner from './brandPartner';
 import CompletedPool from './completedPool';
 import Hero from './hero';
 import TierSystem from './tierSystem';
+import TokenMetrics from './tokenMetrics';
 import UpcomingPool from './upcomingPool';
 const Home = () => {
   return (
@@ -10,7 +11,8 @@ const Home = () => {
       <UpcomingPool />
       <CompletedPool />
       <TierSystem />
-      <BrandAndPartner />
+      <TokenMetrics />
+      {/* <BrandAndPartner /> */}
     </div>
   );
 };

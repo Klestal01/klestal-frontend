@@ -5,7 +5,7 @@ const TierSystem = () => {
         Tier System
       </p>
 
-      <div className="flex justify-center p-[90px] gap-10">
+      <div className="flex flex-col lg:flex-row justify-center items-center p-[30px] lg:p-[90px] gap-10">
         <div className="bg-[#090A19] w-[250px] text-white rounded-md h-[220px] py-3 ">
           <div>
             <div className="flex flex-col justify-center w-fit m-auto gap-2">
