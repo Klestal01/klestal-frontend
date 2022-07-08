@@ -16,7 +16,7 @@ const UpcomingPool = () => {
           </button>
         </div>
       </div>
-      <div className="py-10 lg:ml-[9vw] px-10 grid md:grid-cols-2 lg:grid-flow-col lg:auto-cols-max overflow-auto lg:scrollbar-hide gap-6 justify-center md:justify-start ">
+      <div className="py-10 px-10 grid grid-flow-col auto-cols-max overflow-auto scrollbar-hide gap-6">
         {cardData.map((i) => (
           <Card
             id={i.id}
