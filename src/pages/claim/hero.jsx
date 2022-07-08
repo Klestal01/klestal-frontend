@@ -1,5 +1,4 @@
 import { useState } from 'react';
-
 const ClaimHero = () => {
   const [dropdown, setDropdown] = useState(false);
   const [network, setNetwork] = useState('Binance');
@@ -8,16 +7,22 @@ const ClaimHero = () => {
   };
   return (
     <div className="relative">
-      <div className="bg-[#150015] text-white p-[4rem]">
-        <h1 className="w-full text-center text-4xl font-bold">
+      <img
+        className="h-[30vh] sm:h-[40vh] left-0 z-0 w-full object-cover sm:object-fill opacity-50 md:hidden block"
+        src="./images/claimHeader.png"
+        alt="background"
+        draggable={false}
+      />
+      <div className="md:bg-[#150015] text-white md:p-[4rem] md:static absolute top-4 px-[10px] flex flex-col justify-items-center w-full">
+        <h1 className="w-full text-center text-xl sm:text-3xl md:text-4xl font-bold">
           Claim Your Tokens
         </h1>
-        <h3 className="text-center pt-[2rem] mb-[1rem]">
+        <h3 className="text-center w-full pt-[2rem] mb-[1rem]">
           The allocation is here connect your wallet to claim your tokens.
         </h3>
       </div>
 
-      <div className="absolute top-[200px] left-[35vw] flex flex-row w-[30%] p-[10px] rounded-lg m-auto justify-center bg-[#16182D]">
+      <div className=" md:absolute md:top-[200px] md:left-[30vw] flex flex-row w-full md:w-[40%] p-[10px] md:rounded-lg m-auto justify-center bg-[#16182D]">
         <div
           className="relative cursor-pointer flex flex-row w-full m-auto items-center  p-3"
           onClick={() => toggleDropdown()}
@@ -82,10 +87,10 @@ const ClaimHero = () => {
             </li>
           </ul>
         </div>
-        <div className="flex flex-row gap-4 justify-center w-full items-center m-auto">
+        <div className="md:flex  gap-4 justify-center w-full items-center m-auto hidden ">
           <button
             type="button"
-            className="bg-gradient-to-r from-orange to-red rounded-3xl w-[130px] h-[47px] "
+            className="bg-gradient-to-r from-orange to-red rounded-3xl w-[130px] h-[47px]  "
           >
             Explore
           </button>
@@ -96,6 +101,20 @@ const ClaimHero = () => {
             Apply IDO
           </button>
         </div>
+      </div>
+      <div className="flex flex-row gap-4 pt-[20px] justify-center w-full items-center  m-auto md:hidden ">
+        <button
+          type="button"
+          className="bg-gradient-to-r from-orange to-red rounded-3xl w-[30vw] h-[5vh] mx-[4px] "
+        >
+          Monthly
+        </button>
+        <button
+          type="button"
+          className="border-2 rounded-3xl border-red w-[30vw] h-[5vh]"
+        >
+          Linear
+        </button>
       </div>
     </div>
   );
