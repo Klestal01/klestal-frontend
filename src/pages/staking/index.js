@@ -1,5 +1,11 @@
+import HeroStake from './hero';
+
 const Staking = () => {
-  return <></>;
+  return (
+    <div>
+      <HeroStake />
+    </div>
+  );
 };
 
 export default Staking;
