@@ -1,5 +1,6 @@
 import Card from '../../shared/components/card';
 import { v4 } from 'uuid';
+import { cardData } from '../../shared/mockData';
 
 const CompletedPool = () => {
   const cardData = [
@@ -66,16 +67,17 @@ const CompletedPool = () => {
         <p className="text-2xl  font-bold">Completed Pool</p>
         <div className="flex flex-row gap-4">
           <button className="bg-red h-[50px] w-[50px] rounded-lg">
-            <img src="./arrowRight.svg" className="w-[50px]" />
+            <img src="./images/svgs/arrowRight.svg" className="w-[50px]" />
           </button>
           <button className="bg-red h-[50px] w-[50px] rounded-lg">
-            <img src="./arrowLeft.svg" className="w-[50px]" />
+            <img src="./images/svgs/arrowLeft.svg" className="w-[50px]" />
           </button>
         </div>
       </div>
-      <div className="py-10 px-10 grid grid-flow-col auto-cols-max overflow-auto scrollbar-hide gap-6">
+      <div className="py-10 ml-[9vw] px-10 grid grid-flow-col auto-cols-max overflow-auto scrollbar-hide gap-6">
         {cardData.map((i) => (
           <Card
+            id={i.id}
             key={v4()}
             headerImage={i.headerImage}
             logo={i.logo}
