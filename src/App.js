@@ -8,6 +8,7 @@ import Header from './shared/components/header';
 
 import './App.scss';
 import Footer from './shared/components/footer';
+import PoolDetails from './pages/pool/[slug]';
 
 const App = () => {
   return (
@@ -18,6 +19,7 @@ const App = () => {
           <Routes>
             <Route exact path="/" element={<Home />} />
             <Route path="/pool" element={<Pool />} />
+            <Route path="/poo/:id" element={<PoolDetails />} />
             <Route path="/staking" element={<Staking />} />
             <Route path="/claim" element={<Claim />} />
             <Route path="/apply" element={<Apply />} />
