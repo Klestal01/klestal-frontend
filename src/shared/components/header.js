@@ -164,6 +164,13 @@ const Header = () => {
                 <NavLink to={'/staking'}>Staking</NavLink>
                 <NavLink to={'/claim'}>Claim</NavLink>
                 <NavLink to={'/apply'}>Apply</NavLink>
+                <p
+                  onClick={() => {
+                    setConnect(!connect);
+                  }}
+                >
+                  Connect
+                </p>
               </div>
             )}
           </div>
