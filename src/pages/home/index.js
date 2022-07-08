@@ -1,6 +1,7 @@
 import BrandAndPartner from './brandPartner';
 import CompletedPool from './completedPool';
 import Hero from './hero';
+import Roadmap from './roadmap';
 import TierSystem from './tierSystem';
 import TokenMetrics from './tokenMetrics';
 import UpcomingPool from './upcomingPool';
@@ -12,6 +13,7 @@ const Home = () => {
       <CompletedPool />
       <TierSystem />
       <TokenMetrics />
+      <Roadmap />
       <BrandAndPartner />
     </div>
   );
