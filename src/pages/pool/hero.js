@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import CompletedPool from './completedPool';
 import UpcomingPool from './upcomingPool';
 
@@ -8,28 +8,26 @@ const HeroPool = () => {
   return (
     <div className="text-white">
       <img
-        className="h-[347px] left-0 z-0 w-full object-contain opacity-50"
+        className="sm:h-[50vh] h-[40vh] left-0 z-0 w-full object-cover sm:object-fill opacity-50"
         src="./images/poolHeader.png"
         alt="background"
         draggable={false}
       />
-      <div className="absolute top-[20vh] left-[42vw]  ">
+      <div className="absolute top-[20vh] flex flex-col justify-center w-full ">
         <p className="text-5xl text-center font-bold">Pool</p>
         <p className="text-center mt-[20px] text-sm">
           Invest Early on Potential Projects
         </p>
       </div>
-      <div className="bg-[#16182D] rounded-md relative -top-[50px] left-[28vw] flex w-fit px-[100px] py-[20px] gap-4 justify-center ">
+      <div className="bg-[#16182D] flex w-full lg:w-[40%] gap-4 m-auto justify-center  lg:rounded-md lg:relative  lg:-top-[45px]  lg:px-[50px] py-[20px]">
         <div>
           <button
             type="button"
             onClick={() => {
               setActive('upcoming');
             }}
-            className={`rounded-3xl px-[5vw] py-2   ${
-              active === 'upcoming'
-                ? `bg-gradient-to-r from-orange to-red`
-                : `border-[2px]  border-red`
+            className={`rounded-3xl px-[7vw] md:px-[5vw] py-2  border-[2px] border-red  ${
+              active === 'upcoming' && `bg-gradient-to-r from-orange to-red`
             }`}
           >
             Upcoming
@@ -41,10 +39,8 @@ const HeroPool = () => {
             onClick={() => {
               setActive('completed');
             }}
-            className={`px-[5vw] py-2 rounded-3xl   ${
-              active === 'completed'
-                ? `bg-gradient-to-r from-orange to-red`
-                : `border-[2px]  border-red`
+            className={`px-[7vw] md:px-[5vw] py-2 rounded-3xl border-[2px]  border-red   ${
+              active === 'completed' && `bg-gradient-to-r from-orange to-red`
             }`}
           >
             Completed

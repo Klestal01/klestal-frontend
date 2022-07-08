@@ -5,7 +5,7 @@ import { cardData } from '../../shared/mockData';
 const CompletedPool = () => {
   return (
     <div>
-      <div className="px-[10vw] py-[20px] grid grid-cols-3 gap-x-4 gap-y-10">
+      <div className="px-[10vw] py-[20px] grid grid-cols-1 justify-items-center xl:grid-cols-3 md:grid-cols-2 gap-y-10">
         {cardData.map((i) => (
           <Card
             key={v4()}
