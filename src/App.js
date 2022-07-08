@@ -14,13 +14,15 @@ const App = () => {
     <>
       <BrowserRouter>
         <Header />
-        <Routes>
-          <Route exact path="/" element={<Home />} />
-          <Route path="/pool" element={<Pool />} />
-          <Route path="/staking" element={<Staking />} />
-          <Route path="/claim" element={<Claim />} />
-          <Route path="/apply" element={<Apply />} />
-        </Routes>
+        <div className="pt-[10vh] pb-[10vh]">
+          <Routes>
+            <Route exact path="/" element={<Home />} />
+            <Route path="/pool" element={<Pool />} />
+            <Route path="/staking" element={<Staking />} />
+            <Route path="/claim" element={<Claim />} />
+            <Route path="/apply" element={<Apply />} />
+          </Routes>
+        </div>
       </BrowserRouter>
       <Footer />
     </>
