@@ -15,7 +15,7 @@ const App = () => {
     <>
       <BrowserRouter>
         <Header />
-        <div className="pt-[10vh] pb-[10vh] text-white">
+        <div className="py-[10vh] text-white">
           <Routes>
             <Route exact path="/" element={<Home />} />
             <Route path="/pool" element={<Pool />} />

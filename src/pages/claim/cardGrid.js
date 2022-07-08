@@ -4,7 +4,7 @@ import { cardData } from '../../shared/mockData';
 
 const CardGrid = () => {
   return (
-    <div className="flex flex-col gap-4 py-[20px]">
+    <div className="flex flex-col gap-4 py-[20px] mt-[4rem]">
       {cardData.map((i) => {
         return (
           <ClaimCard
