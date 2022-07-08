@@ -5,11 +5,11 @@ const BrandAndPartner = () => {
         Backers & Partners
       </p>
       <div className="flex gap-12 my-[45px] justify-center ">
-        <img src="1.png" className="w-[10vw] h-[6vh]" />
-        <img src="2.png" className="w-[10vw] h-[6vh]" />
-        <img src="3.png" className="w-[10vw] h-[6vh]" />
-        <img src="4.png" className="w-[10vw] h-[6vh]" />
-        <img src="5.png" className="w-[10vw] h-[6vh]" />
+        <img src="./images/partners/1.png" className="w-[10vw] h-[6vh]" />
+        <img src="./images/partners/2.png" className="w-[10vw] h-[6vh]" />
+        <img src="./images/partners/3.png" className="w-[10vw] h-[6vh]" />
+        <img src="./images/partners/4.png" className="w-[10vw] h-[6vh]" />
+        <img src="./images/partners/5.png" className="w-[10vw] h-[6vh]" />
       </div>
     </div>
   );
