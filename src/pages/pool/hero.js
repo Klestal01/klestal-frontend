@@ -9,7 +9,7 @@ const HeroPool = () => {
     <div className="text-white">
       <img
         className="h-[347px] left-0 z-0 w-full object-contain opacity-50"
-        src="./poolHeader.png"
+        src="./images/poolHeader.png"
         alt="background"
         draggable={false}
       />
