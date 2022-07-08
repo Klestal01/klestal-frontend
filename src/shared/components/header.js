@@ -12,7 +12,7 @@ const Header = () => {
               onClick={() => {
                 setSelect('home');
               }}
-              src="./logo.png"
+              src="./images/logo.png"
               className="h-10 cursor-pointer"
             />
           </NavLink>

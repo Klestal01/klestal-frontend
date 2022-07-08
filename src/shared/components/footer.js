@@ -3,7 +3,7 @@ const Footer = () => {
     <div>
       <div className="text-white grid grid-cols-4 border-y-[1px] py-[10vh] border-[#4B4D6A]">
         <div className="px-[10vw] w-full col-span-2">
-          <img src="./logo.png" />
+          <img src="./images/logo.png" />
           <p className="text-[#6B6D84] pt-[40px] w-[30vw] text-sm">
             Klestal is an IDO compatible, fully decentralized and interactive
             platform for cherry-picked projects in the metaverse.
