@@ -19,7 +19,7 @@ const HeroPool = () => {
           Invest Early on Potential Projects
         </p>
       </div>
-      <div className="bg-[#16182D] rounded-md relative -top-20 left-[28vw] flex w-fit px-[100px] py-[20px] gap-4 justify-center ">
+      <div className="bg-[#16182D] rounded-md relative -top-[50px] left-[28vw] flex w-fit px-[100px] py-[20px] gap-4 justify-center ">
         <div>
           <button
             type="button"
