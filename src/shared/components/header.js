@@ -11,7 +11,7 @@ const Header = () => {
       {connect ? (
         <Modal>
           <>
-            <div className="w-[80vw] md:w-[50vw] h-[60vh] md:h-[50vh] bg-[#23243E] text-white relative p-[30px] flex flex-col justify-evenly ">
+            <div className="w-[80vw] md:w-[600px] h-[60vh] md:h-[400px] bg-[#23243E] text-white relative p-[30px] flex flex-col justify-evenly ">
               <h1 className="font-bold text-md sm:text-3xl  text-center">
                 Connect Wallet
               </h1>
@@ -41,7 +41,7 @@ const Header = () => {
           </>
         </Modal>
       ) : null}
-      <nav className="flex flex-row bg-bgColor h-[10vh] w-full fixed z-10">
+      <nav className="flex items-center bg-bgColor h-[10vh] w-full fixed z-10 ">
         <div className=" text-white px-6 py-3 flex lg:justify-around justify-between w-full items-center">
           <div className="">
             <NavLink to={'/'}>
@@ -144,7 +144,7 @@ const Header = () => {
               </button>
             </div>
           </div>
-          <div className="flex-col  md:hidden  h-full justify-between">
+          <div className="flex-col   md:hidden  h-full justify-between">
             <img
               src="./images/svgs/menu.svg"
               className="float-right"
@@ -154,7 +154,7 @@ const Header = () => {
             />
             {nav && (
               <div
-                className="flex flex-col text-left px-3 "
+                className="flex flex-col text-left px-3"
                 onClick={() => {
                   setNav(false);
                 }}
