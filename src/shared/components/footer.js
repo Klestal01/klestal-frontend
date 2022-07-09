@@ -1,7 +1,7 @@
 const Footer = () => {
   return (
     <>
-      <div className="text-white grid grid-cols-1 lg:grid-cols-4 border-y-[1px] gap-4 lg:gap-0 py-[10vh] border-[#4B4D6A] p-[10px] ">
+      <div className="text-white grid grid-cols-1 lg:grid-cols-4 border-y-[1px] gap-4 lg:gap-0 py-[10vh] border-[#4B4D6A] p-[10px] pl-[30px] lg:pl-[10px] ">
         <div className="lg:px-[10vw] w-full lg:col-span-2">
           <img src="./images/logo.png" className="w-[50px] lg:w-[100px]" />
           <p className="text-[#6B6D84] pt-[40px] w-full lg:w-[30vw] text-sm">
@@ -23,7 +23,7 @@ const Footer = () => {
         </div>
       </div>
       <div className="flex justify-center">
-        <p className="text-[#6B6D84] text-sm py-[50px]">
+        <p className="text-[#6B6D84] text-sm py-[2.5vh]">
           Copyright 2022. Klestal. All Rights Reserved.
         </p>
       </div>
