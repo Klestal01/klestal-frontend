@@ -2,13 +2,13 @@ const Hero = () => {
   return (
     <div className="">
       <img
-        className="  z-0 sm:w-full   object-scale-down  sm:object-contain"
+        className="  z-0 w-full object-cover md:object-contain h-[400px] md:h-fit "
         src="./images/hero-bg.png"
         alt="background"
         draggable={false}
       />
       <div className="z-1 relative md:absolute md:top-[20vh] px-[8vw]  lg:pl-[12vw] w-full text-center lg:text-left lg:w-[55vw] text-white">
-        <h1 className="text-4xl md:text-3xl lg:text-2xl xl:text-6xl font-sans font-bold -top-20 left-0 sm:top-20 sm:static absolute">
+        <h1 className="text-4xl sm:text-5xl md:text-3xl lg:text-2xl xl:text-6xl  sm:px-0 font-sans font-bold -top-20 left-0 sm:top-20 sm:static absolute">
           The Foremost interactive Metaverse Launchpad
         </h1>
         <p className="opacity-50 sm:mt-10 md:mt-5 pt-[15vh] sm:pt-0">
