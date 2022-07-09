@@ -2,6 +2,7 @@ import { useState } from 'react';
 const ClaimHero = () => {
   const [dropdown, setDropdown] = useState(false);
   const [network, setNetwork] = useState('Binance');
+  const [active, setActive] = useState('monthly');
   const toggleDropdown = () => {
     setDropdown(!dropdown);
   };
@@ -22,7 +23,7 @@ const ClaimHero = () => {
         </h3>
       </div>
 
-      <div className=" md:absolute md:top-[200px] md:left-[30vw] flex flex-row w-full md:w-[40%] p-[10px] md:rounded-lg m-auto justify-center bg-[#16182D]">
+      <div className=" md:absolute md:top-[200px] md:left-[26vw] flex flex-row w-full md:w-[50%] p-[10px] md:rounded-lg m-auto justify-center bg-[#16182D]">
         <div
           className="relative cursor-pointer flex flex-row w-full m-auto items-center  p-3"
           onClick={() => toggleDropdown()}
@@ -105,13 +106,19 @@ const ClaimHero = () => {
       <div className="flex flex-row gap-4 pt-[20px] justify-center w-full items-center  m-auto md:hidden ">
         <button
           type="button"
-          className="bg-gradient-to-r from-orange to-red rounded-3xl w-[30vw] h-[5vh] mx-[4px] "
+          onClick={() => setActive('monthly')}
+          className={`border-2 rounded-3xl border-red w-[30vw] h-[5vh] ${
+            active === 'monthly' && `bg-gradient-to-r from-orange to-red`
+          }`}
         >
           Monthly
         </button>
         <button
           type="button"
-          className="border-2 rounded-3xl border-red w-[30vw] h-[5vh]"
+          onClick={() => setActive('linear')}
+          className={`border-2 rounded-3xl border-red w-[30vw] h-[5vh] ${
+            active === 'linear' && `bg-gradient-to-r from-orange to-red`
+          }`}
         >
           Linear
         </button>
