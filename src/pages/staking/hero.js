@@ -127,7 +127,7 @@ const HeroStake = () => {
 
       <div className="md:absolute top-[10rem] w-full flex flex-col justify-center ">
         <div className="absolute top-52 md:static h-[40vh] flex flex-col items-center w-full  gap-8">
-          <h1 className="text-2xl sm:text-5xl font-bold text-white text-center">
+          <h1 className="text-5xl font-bold text-white text-center">
             Staking Dashboard
           </h1>
           <h3 className="text-lg text-white text-center ">

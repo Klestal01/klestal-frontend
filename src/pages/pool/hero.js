@@ -15,7 +15,7 @@ const HeroPool = () => {
       />
       <div className="absolute top-[20vh] flex flex-col justify-center w-full ">
         <p className="text-5xl text-center font-bold">Pool</p>
-        <p className="text-center mt-[20px] text-sm">
+        <p className="text-center mt-[20px] text-xl">
           Invest Early on Potential Projects
         </p>
       </div>

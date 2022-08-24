@@ -15,8 +15,8 @@ const ClaimHero = () => {
         alt="background"
         draggable={false}
       />
-      <div className="md:bg-[#150015] text-white md:p-[4rem] md:static absolute top-4 px-[10px] flex flex-col justify-items-center w-full">
-        <h1 className="w-full text-center text-xl sm:text-3xl md:text-4xl font-bold">
+      <div className="md:bg-[#150015] text-white pt-4 md:p-[4rem] md:static absolute top-4 px-[10px] flex flex-col justify-items-center w-full">
+        <h1 className="w-full text-center text-4xl font-bold">
           Claim Your Tokens
         </h1>
         <h3 className="text-center w-full pt-[2rem] mb-[1rem]">
