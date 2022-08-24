@@ -50,7 +50,7 @@ const Header = () => {
                   setSelect('home');
                 }}
                 src="./images/logo.png"
-                className="h-6 md:h-10 cursor-pointer "
+                className="h-10 md:h-10 cursor-pointer "
               />
             </NavLink>
           </div>
