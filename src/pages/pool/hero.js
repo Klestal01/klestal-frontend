@@ -8,7 +8,7 @@ const HeroPool = () => {
   return (
     <div className="text-white">
       <img
-        className="sm:h-[50vh] h-[40vh] left-0 z-0 w-full object-cover sm:object-fill opacity-50"
+        className="sm:h-[50vh] h-[40vh] left-0 z-0 w-full object-cover  opacity-50"
         src="./images/poolHeader.png"
         alt="background"
         draggable={false}
@@ -52,5 +52,4 @@ const HeroPool = () => {
     </div>
   );
 };
-
 export default HeroPool;

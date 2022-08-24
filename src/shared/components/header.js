@@ -11,7 +11,7 @@ const Header = () => {
       {connect ? (
         <Modal>
           <>
-            <div className="w-[80vw] md:w-[600px] h-[60vh] md:h-[400px] bg-[#23243E] text-white relative p-[30px] flex flex-col justify-evenly ">
+            <div className="w-[80vw] md:w-[600px] max-w-xl h-[60vh] md:h-[400px] bg-[#23243E] text-white relative p-[30px] flex flex-col justify-evenly ">
               <h1 className="font-bold text-md sm:text-3xl  text-center">
                 Connect Wallet
               </h1>
@@ -144,7 +144,7 @@ const Header = () => {
               </button>
             </div>
           </div>
-          <div className="flex-col   md:hidden  h-full justify-between">
+          <div className="flex-col relative  md:hidden  h-full justify-between">
             <img
               src="./images/svgs/menu.svg"
               className="float-right"
@@ -154,16 +154,26 @@ const Header = () => {
             />
             {nav && (
               <div
-                className="flex flex-col text-left px-3"
+                className="flex flex-col bg-opacity-25 bg-[#EC22F3] rounded-md absolute  right-0 top-10 text-xl cusrsor-pointer text-left px-3"
                 onClick={() => {
                   setNav(false);
                 }}
               >
-                <NavLink to={'/'}>Home</NavLink>
-                <NavLink to={'/pool'}>Pool</NavLink>
-                <NavLink to={'/staking'}>Staking</NavLink>
-                <NavLink to={'/claim'}>Claim</NavLink>
-                <NavLink to={'/apply'}>Apply</NavLink>
+                <NavLink to={'/'}>
+                  <p className="border-b-1 ">Home</p>
+                </NavLink>
+                <NavLink to={'/pool'}>
+                  <p className="border-b-1 ">Pool</p>
+                </NavLink>
+                <NavLink to={'/staking'}>
+                  <p className="border-b-1 ">Staking</p>
+                </NavLink>
+                <NavLink to={'/claim'}>
+                  <p className="border-b-1 ">Claim</p>
+                </NavLink>
+                <NavLink to={'/apply'}>
+                  <p>Apply</p>
+                </NavLink>
                 <p
                   onClick={() => {
                     setConnect(!connect);

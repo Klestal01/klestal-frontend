@@ -1,6 +1,7 @@
 import { useState } from 'react';
 const ClaimHero = () => {
   const [dropdown, setDropdown] = useState(false);
+  const [exlore, setExplore] = useState('explore');
   const [network, setNetwork] = useState('Binance');
   const [active, setActive] = useState('monthly');
   const toggleDropdown = () => {
@@ -75,12 +76,6 @@ const ClaimHero = () => {
               Bitcoin
             </li>
             <li
-              className="py-2  mx-2.5 opacity-60 w-full"
-              onClick={() => setNetwork('pan di shiki')}
-            >
-              Pan di shiki
-            </li>
-            <li
               className="py-2  mx-2.5  opacity-60 w-full"
               onClick={() => setNetwork('Polygon')}
             >
@@ -91,13 +86,27 @@ const ClaimHero = () => {
         <div className="md:flex  gap-4 justify-center w-full items-center m-auto hidden ">
           <button
             type="button"
-            className="bg-gradient-to-r from-orange to-red rounded-3xl w-[130px] h-[47px]  "
+            onClick={() => {
+              setExplore('explore');
+            }}
+            className={`${
+              exlore === 'explore'
+                ? `bg-gradient-to-r from-orange to-red`
+                : `border-red border`
+            } rounded-3xl w-[130px] h-[47px] `}
           >
             Explore
           </button>
           <button
             type="button"
-            className="border-2 rounded-3xl border-red w-[130px] h-[47px]"
+            onClick={() => {
+              setExplore('apply');
+            }}
+            className={`${
+              exlore === 'apply'
+                ? `bg-gradient-to-r from-orange to-red`
+                : `border-red border`
+            } rounded-3xl w-[130px] h-[47px] `}
           >
             Apply IDO
           </button>
@@ -126,5 +135,4 @@ const ClaimHero = () => {
     </div>
   );
 };
-
 export default ClaimHero;
