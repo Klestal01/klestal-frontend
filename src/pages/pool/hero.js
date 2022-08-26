@@ -8,6 +8,7 @@ const HeroPool = () => {
   return (
     <div className="text-white">
       <img
+        id="pool-hero-img"
         className="sm:h-[50vh] h-[40vh] left-0 z-0 w-full object-cover  opacity-50"
         src="./images/poolHeader.png"
         alt="background"
