@@ -52,3 +52,10 @@
 #modal:empty {
   display: none;
 }
+
+// home
+@media screen and (max-width: 767px){   
+  #home-hero-img{      
+      content:url("../public/images/hero-bg-mobile.png");
+  } 
+}

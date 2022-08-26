@@ -2,7 +2,8 @@ const Hero = () => {
   return (
     <div className="">
       <img
-        className="  z-0 w-full object-cover md:object-contain h-[400px] md:h-fit "
+        id="home-hero-img"
+        className="z-0 w-full object-cover md:object-contain h-[400px] md:h-fit"
         src="./images/hero-bg.png"
         alt="background"
         draggable={false}
