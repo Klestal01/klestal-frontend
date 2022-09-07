@@ -1,8 +1,0 @@
-node_modules/
-public/
-build/
-.eslintrc.json
-tailwind.config.js
-postcss.config.js
-*.scss
-*.svg

@@ -1,9 +1,11 @@
+import logo from "../../images/logo.png";
+
 const Footer = () => {
   return (
     <>
       <div className="text-white grid grid-cols-1 lg:grid-cols-4 border-y-[1px] gap-4 lg:gap-0 py-[10vh] border-[#4B4D6A] p-[10px] pl-[30px] lg:pl-[10px] ">
         <div className="lg:px-[10vw] w-full lg:col-span-2">
-          <img src="./images/logo.png" className="w-[50px] lg:w-[100px]" />
+          <img alt="no" src={logo} className="w-[50px] lg:w-[100px]" />
           <p className="text-[#6B6D84] pt-[40px] w-full lg:w-[30vw] text-sm">
             Klestal is an IDO compatible, fully decentralized and interactive
             platform for cherry-picked projects in the metaverse.

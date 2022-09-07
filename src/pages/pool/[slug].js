@@ -4,6 +4,13 @@ import { useParams } from 'react-router-dom';
 import { cardData } from '../../shared/mockData';
 import { v4 } from 'uuid';
 
+import discord from '../../images/svgs/discord.svg';
+import twitter from '../../images/svgs/twitter.svg';
+import telegram from '../../images/svgs/telegram.svg';
+import facebook from '../../images/svgs/facebook.svg';
+import Layer_2 from '../../images/svgs/Layer_2.svg';
+import bscLogo from '../../images/bsc-logo.png';
+
 const PoolDetails = () => {
   const { id } = useParams();
   const [nav, setNav] = useState('project');
@@ -11,9 +18,9 @@ const PoolDetails = () => {
   React.useEffect(() => {
     //here Api call will be done to GET /pool/:id
     cardData.map((item) => {
-      if (item.id === id) {
-        return setPageData(item);
-      }
+      // if (item.id === id) { //! temporary fix
+      return setPageData(item);
+      // }
     });
   }, [id]);
 
@@ -56,7 +63,7 @@ const PoolDetails = () => {
           <div className=" flex flex-col items-center gap-4 lg:ml-[20px]">
             <h1 className="flex gap-4 text-2xl font-semibold">
               {pageData?.ProjectName}
-              <img className=" items-center" src="./images/bsc-logo.png" />
+              <img alt="no" className=" items-center" src={bscLogo} />
             </h1>
             <p className="text-sm opacity-60">{pageData?.description}</p>
             <p className="text-xs opacity-60"> $MSHARD = 0.25 BUSD </p>
@@ -111,11 +118,11 @@ const PoolDetails = () => {
         <div className="flex flex-col gap-4 lg:gap-0 lg:flex-row items-center lg:justify-between">
           <p>Participants: 4017/5000</p>
           <span className="flex w-full flex-row gap-2 justify-center lg:justify-end">
-            <img src="./images/svgs/discord.svg" />
-            <img src="./images/svgs/twitter.svg" />
-            <img src="./images/svgs/telegram.svg" />
-            <img src="./images/svgs/facebook.svg" />
-            <img src="./images/svgs/Layer_2.svg" />
+            <img alt="no" src={discord} />
+            <img alt="no" src={twitter} />
+            <img alt="no" src={telegram} />
+            <img alt="no" src={facebook} />
+            <img alt="no" src={Layer_2} />
           </span>
         </div>
       </div>

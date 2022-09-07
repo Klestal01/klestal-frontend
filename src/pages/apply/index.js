@@ -1,5 +1,5 @@
 const Apply = () => {
-  return;
+  return <div></div>;
 };
 
 export default Apply;

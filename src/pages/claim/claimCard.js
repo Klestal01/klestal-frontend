@@ -2,7 +2,7 @@ const ClaimCard = (props) => {
   return (
     <div className="flex flex-row gap-4 p-[20px] border-[2px] border-[#292B41] rounded-lg text-white justify-evenly w-[80vw] m-auto">
       <div className="text-left min-w-fit">
-        <img src={props.logo} className="rounded-full w-[70px] h-[70px]" />
+        <img src={props.logo} alt="no" className="rounded-full w-[70px] h-[70px]" />
       </div>
       <div className="flex w-full md:flex-row justify-start flex-col gap-4">
         <div className="w-full flex flex-row">

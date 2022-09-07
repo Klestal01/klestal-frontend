@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import CompletedPool from './completedPool';
 import UpcomingPool from './upcomingPool';
+import poolHeader from "../../images/poolHeader.png";
 
 const HeroPool = () => {
   const [active, setActive] = useState('upcoming');
@@ -10,7 +11,7 @@ const HeroPool = () => {
       <img
         id="pool-hero-img"
         className="sm:h-[50vh] h-[40vh] left-0 z-0 w-full object-cover  opacity-50"
-        src="./images/poolHeader.png"
+        src={poolHeader}
         alt="background"
         draggable={false}
       />

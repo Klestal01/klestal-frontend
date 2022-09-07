@@ -1,8 +1,18 @@
+import header2 from "../images/header2.png"
+import header3 from "../images/header3.png"
+import card1Head from "../images/card1Head.png"
+import logo4 from "../images/logo4.png"
+import logo1 from "../images/logo1.png"
+import logo2 from "../images/logo2.png"
+import logo3 from "../images/logo3.png"
+import logo5 from "../images/logo5.png"
+import logo6 from "../images/logo6.png"
+
 export const cardData = [
   {
     id: 'testID1',
-    headerImage: './images/header2.png',
-    logo: './images/logo4.png',
+    headerImage: header2,
+    logo: logo4,
     ProjectName: 'Project Name',
     PlaceHolder: 'Place Holder',
     description: 'lorem ispum',
@@ -15,8 +25,8 @@ export const cardData = [
   },
   {
     id: 'testID2',
-    headerImage: './images/header3.png',
-    logo: './images/logo1.png',
+    headerImage: header3,
+    logo: logo1,
     ProjectName: 'Project Name',
     PlaceHolder: 'Place Holder',
     description: 'lorem ispum',
@@ -29,8 +39,8 @@ export const cardData = [
   },
   {
     id: 'testID3',
-    headerImage: './images/card1Head.png',
-    logo: './images/logo2.png',
+    headerImage: card1Head,
+    logo: logo2,
     ProjectName: 'Project Name',
     PlaceHolder: 'Place Holder',
     description: 'lorem ispum.',
@@ -43,8 +53,8 @@ export const cardData = [
   },
   {
     id: 'testID4',
-    headerImage: './images/card1Head.png',
-    logo: './images/logo3.png',
+    headerImage: card1Head,
+    logo: logo3,
     ProjectName: 'Project Name',
     PlaceHolder: 'Place Holder',
     description: 'lorem ispum',
@@ -57,8 +67,8 @@ export const cardData = [
   },
   {
     id: 'testID5',
-    headerImage: './images/header2.png',
-    logo: './images/logo5.png',
+    headerImage: header2,
+    logo: logo5,
     ProjectName: 'Project Name',
     PlaceHolder: 'Place Holder',
     description: 'lorem ispum',
@@ -71,8 +81,8 @@ export const cardData = [
   },
   {
     id: 'testID6',
-    headerImage: './images/header2.png',
-    logo: './images/logo6.png',
+    headerImage: header2,
+    logo: logo6,
     ProjectName: 'Project Name',
     PlaceHolder: 'Place Holder',
     description: 'lorem ispum',
@@ -85,8 +95,8 @@ export const cardData = [
   },
   {
     id: 'testID7',
-    headerImage: './images/card1Head.png',
-    logo: './images/logo1.png',
+    headerImage: card1Head,
+    logo: logo1,
     ProjectName: 'Project Name',
     PlaceHolder: 'Place Holder',
     description: 'lorem ispum',
@@ -99,8 +109,8 @@ export const cardData = [
   },
   {
     id: 'testID8',
-    headerImage: './images/header2.png',
-    logo: './images/logo2.png',
+    headerImage: header2,
+    logo: logo2,
     ProjectName: 'Project Name',
     PlaceHolder: 'Place Holder',
     description: 'lorem ispum',
@@ -113,8 +123,8 @@ export const cardData = [
   },
   {
     id: 'testID9',
-    headerImage: './images/card1Head.png',
-    logo: './images/logo3.png',
+    headerImage: card1Head,
+    logo: logo3,
     ProjectName: 'Project Name',
     PlaceHolder: 'Place Holder',
     description: 'lorem ispum',
@@ -127,8 +137,8 @@ export const cardData = [
   },
   {
     id: 'testID10',
-    headerImage: './images/header2.png',
-    logo: './images/logo6.png',
+    headerImage: header2,
+    logo: logo6,
     ProjectName: 'Project Name',
     PlaceHolder: 'Place Holder',
     description: 'lorem ispum',
@@ -141,8 +151,8 @@ export const cardData = [
   },
   {
     id: 'testID11',
-    headerImage: './images/card1Head.png',
-    logo: './images/logo3.png',
+    headerImage: card1Head,
+    logo: logo3,
     ProjectName: 'Project Name',
     PlaceHolder: 'Place Holder',
     description: 'lorem ispum',

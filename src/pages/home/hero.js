@@ -1,10 +1,12 @@
+import herobg from "../../images/hero-bg.png"
+
 const Hero = () => {
   return (
     <div className="">
       <img
         id="home-hero-img"
         className="z-0 w-full object-cover md:object-contain h-[400px] md:h-fit"
-        src="./images/hero-bg.png"
+        src={herobg}
         alt="background"
         draggable={false}
       />

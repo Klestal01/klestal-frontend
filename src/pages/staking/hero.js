@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import Modal from '../../shared/components/modal';
+import stakingHeader from "../../images/stakingHeader.png";
 
 const HeroStake = () => {
   const [modal, setModal] = useState(false);
@@ -119,7 +120,7 @@ const HeroStake = () => {
       <div className="w-full">
         <img
           className=" left-0 z-0 w-full h-[50vh] md:h-[522px] object-cover  opacity-40"
-          src="./images/stakingHeader.png"
+          src={stakingHeader}
           alt="background"
           draggable={false}
         />
@@ -141,7 +142,7 @@ const HeroStake = () => {
               <div className="grid grid-cols-1  sm:grid-cols-2 gap-4 mt-[5vh] justify-around sm:justify-evenly">
                 <div className="flex flex-col gap-2">
                   <p className="text-sm opacity-60">Total Staked</p>
-                  {connect == true ? (
+                  {connect === true ? (
                     <div>
                       <div className="flex gap-2 items-baseline">
                         <p className="text-3xl font-semibold ">0</p>
@@ -155,7 +156,7 @@ const HeroStake = () => {
                 </div>
                 <div className="flex flex-col gap-2">
                   <p className="text-sm opacity-60">Available in Wallet</p>
-                  {connect == true ? (
+                  {connect === true ? (
                     <div>
                       <div className="flex gap-2 items-baseline">
                         <p className="text-3xl font-semibold ">1000</p>

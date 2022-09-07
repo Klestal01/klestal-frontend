@@ -1,6 +1,8 @@
 import Card from '../../shared/components/card';
 import { v4 } from 'uuid';
 import { cardData } from '../../shared/mockData';
+import arrowRight from "../../images/svgs/arrowRight.svg";
+import arrowLeft from "../../images/svgs/arrowLeft.svg";
 
 const CompletedPool = () => {
   return (
@@ -9,10 +11,10 @@ const CompletedPool = () => {
         <p className="text-lg lg:text-2xl  font-bold">Completed Pool</p>
         <div className="flex flex-row gap-4">
           <button className="bg-red lg:h-[50px] w-[30px] h-[30px] lg:w-[50px] rounded-md lg:rounded-lg">
-            <img src="./images/svgs/arrowRight.svg" className="w-[50px]" />
+            <img alt="no" src={arrowRight} className="w-[50px]" />
           </button>
           <button className="bg-red lg:h-[50px] w-[30px] h-[30px] lg:w-[50px] rounded-md lg:rounded-lg">
-            <img src="./images/svgs/arrowLeft.svg" className="w-[50px]" />
+            <img alt="no" src={arrowLeft} className="w-[50px]" />
           </button>
         </div>
       </div>

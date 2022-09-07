@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import claimHeader from "../../images/claimHeader.png"
 const ClaimHero = () => {
   const [dropdown, setDropdown] = useState(false);
   const [exlore, setExplore] = useState('explore');
@@ -11,7 +12,7 @@ const ClaimHero = () => {
     <div className="relative">
       <img
         className="h-[30vh] sm:h-[40vh] left-0 z-0 w-full object-cover sm:object-fill opacity-50 md:hidden block"
-        src="./images/claimHeader.png"
+        src={claimHeader}
         alt="background"
         draggable={false}
       />

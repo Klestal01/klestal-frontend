@@ -1,19 +1,43 @@
 import { React, useState } from 'react';
-import { Router, NavLink } from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
 import Modal from '../../shared/components/modal';
+import logo from '../../images/logo.png';
+import Metamask from '../../images/metamask.png';
+import TrustWallet from '../../images/trust-wallet.png';
+import menu from '../../images/svgs/menu.svg';
+import useEagerConnect from '../../hooks/useEagerConnect';
+import useInactiveListener from '../../hooks/useInactiveListener';
+import { useWeb3React } from '@web3-react/core';
+import connectorList from '../../lib/connectors';
 
 const Header = () => {
   const [select, setSelect] = useState('home');
   const [connect, setConnect] = useState(false);
   const [nav, setNav] = useState(false);
+
+  const { activate, deactivate, active } = useWeb3React();
+
+  const triedEager = useEagerConnect();
+
+  useInactiveListener(!triedEager);
+
+  const handleClick = (connectorName) => () => {
+    activate(connectorList[connectorName]);
+  };
+
+  const handleDisconnect = (connectorName) => {
+    deactivate(connectorList[connectorName]);
+    setConnect(false);
+  };
+
   return (
     <>
-      {connect ? (
+      {!active && connect ? (
         <Modal>
           <>
             <div className="w-[80vw] md:w-[600px] max-w-xl h-[60vh] md:h-[400px] bg-[#23243E] text-white relative p-[30px] flex flex-col justify-evenly ">
               <h1 className="font-bold text-md sm:text-3xl  text-center">
-                Connect Wallet
+                Connect
               </h1>
               <button
                 onClick={() => setConnect(false)}
@@ -22,16 +46,20 @@ const Header = () => {
                 &#128473;
               </button>
               <div className="flex flex-col gap-6 mt-[40px] items-center">
-                <button className="bg-[#1F2134] w-[70%] rounded-md flex justify-center items-center text-sm md:text-lg font-semibold gap-5 py-[20px]">
-                  <img
-                    src="./images/metamask.png"
-                    className="w-[30px] md:w-fit"
-                  />
+                <button
+                  onClick={handleClick('MetaMask')}
+                  className="bg-[#1F2134] w-[70%] rounded-md flex justify-center items-center text-sm md:text-lg font-semibold gap-5 py-[20px]"
+                >
+                  <img alt="no" src={Metamask} className="w-[30px] md:w-fit" />
                   Metamask
                 </button>
-                <button className="bg-[#1F2134] w-[70%] rounded-md flex justify-center items-center text-sm md:text-lg font-semibold gap-5 py-[20px]">
+                <button
+                  onClick={handleClick('WalletConnect')}
+                  className="bg-[#1F2134] w-[70%] rounded-md flex justify-center items-center text-sm md:text-lg font-semibold gap-5 py-[20px]"
+                >
                   <img
-                    src="./images/trust-wallet.png"
+                    alt="no"
+                    src={TrustWallet}
                     className="w-[30px] md:w-fit"
                   />
                   Trust Wallet
@@ -40,16 +68,19 @@ const Header = () => {
             </div>
           </>
         </Modal>
-      ) : null}
+      ) : (
+        <></>
+      )}
       <nav className="flex items-center bg-bgColor h-[10vh] w-full fixed z-10 ">
         <div className=" text-white px-6 py-3 flex lg:justify-around justify-between w-full items-center">
           <div className="">
             <NavLink to={'/'}>
               <img
+                alt="no"
                 onClick={() => {
                   setSelect('home');
                 }}
-                src="./images/logo.png"
+                src={logo}
                 className="h-10 md:h-10 cursor-pointer "
               />
             </NavLink>
@@ -73,7 +104,6 @@ const Header = () => {
               <div
                 onClick={() => {
                   setSelect('pool');
-                  Router.push('/pool');
                 }}
                 className={`${
                   select === 'pool'
@@ -137,16 +167,17 @@ const Header = () => {
             <div>
               <button
                 type="button"
-                onClick={() => setConnect(!connect)}
                 className="border-2 px-7 py-2 rounded-3xl border-purple"
+                onClick={active ? handleDisconnect : () => setConnect(true)}
               >
-                Connect
+                {active ? 'Disconnect' : 'Connect'}
               </button>
             </div>
           </div>
           <div className="flex-col relative  md:hidden  h-full justify-between">
             <img
-              src="./images/svgs/menu.svg"
+              alt="no"
+              src={menu}
               className="float-right"
               onClick={() => {
                 setNav(!nav);
@@ -174,12 +205,8 @@ const Header = () => {
                 <NavLink to={'/apply'}>
                   <p>Apply</p>
                 </NavLink>
-                <p
-                  onClick={() => {
-                    setConnect(!connect);
-                  }}
-                >
-                  Connect
+                <p onClick={active ? handleDisconnect('MetaMask') : () => setConnect(true)}>
+                  {active ? 'Disconnect' : 'Connect'}
                 </p>
               </div>
             )}

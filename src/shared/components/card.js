@@ -1,4 +1,9 @@
 import { NavLink } from 'react-router-dom';
+import discord from "../../images/svgs/discord.svg"
+import twitter from "../../images/svgs/twitter.svg"
+import telegram from "../../images/svgs/telegram.svg"
+import facebook from "../../images/svgs/facebook.svg"
+import Layer_2 from "../../images/svgs/Layer_2.svg"
 
 const Card = (props) => {
   const percentage = 'w-[' + props.percentage + '%]';
@@ -9,11 +14,12 @@ const Card = (props) => {
         className={`h-[500px] rounded-md w-[270px] sm:w-[350px] bg-cardColor`}
       >
         <div className="justify-items-center ">
-          <img src={props.headerImage} className="z-0 object-fill  " />
+          <img alt="no" src={props.headerImage} className="z-0 object-fill  " />
         </div>
         <div className=" relative m-auto w-full">
           <div className="absolute flex -top-8 justify-center m-auto w-full ">
             <img
+              alt="no"
               src={props.logo}
               className="object-contain w-[80px]  justify-around"
             />
@@ -25,11 +31,11 @@ const Card = (props) => {
               {props.PlaceHolder}
             </p>
             <div className="flex gap-2 justify-center pt-[10px]">
-              <img src="./images/svgs/discord.svg" />
-              <img src="./images/svgs/twitter.svg" />
-              <img src="./images/svgs/telegram.svg" />
-              <img src="./images/svgs/facebook.svg" />
-              <img src="./images/svgs/Layer_2.svg" />
+              <img alt="no" src={discord} />
+              <img alt="no" src={twitter} />
+              <img alt="no" src={telegram} />
+              <img alt="no" src={facebook} />
+              <img alt="no" src={Layer_2} />
             </div>
             <p className="opacity-40 text-[0.8rem] px-[20px] text-center pt-[20px]">
               {props.description}
